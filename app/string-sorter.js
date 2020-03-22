@@ -26,5 +26,7 @@ const stringSorter = {
   },
   renderActiveList: function() {
     // return the active array rendered to a list
+    const currentDisplayed = this.state.active;
+    return this.state[currentDisplayed];
   }
 };
