@@ -7,7 +7,8 @@ const incrementor = {
   },
   renderCurrent: function() {
     const initialLi = document.createElement("li");
-    initialLi.innerHTML = this.state[this.active];
+    const currentDisplayed = this.state.active;
+    initialLi.innerHTML = this.state[currentDisplayed];
     return initialLi;
   }
 };
