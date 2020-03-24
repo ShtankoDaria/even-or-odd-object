@@ -28,5 +28,12 @@ const stringSorter = {
     // return the active array rendered to a list
     const currentDisplayed = this.state.active;
     return this.state[currentDisplayed];
+  },
+  renderCurrent: function() {
+    //create DOM element
+    const initialLi = document.createElement("li");
+    const currentDisplayed = this.state.active;
+    initialLi.innerHTML = this.state[currentDisplayed];
+    return initialLi;
   }
 };
