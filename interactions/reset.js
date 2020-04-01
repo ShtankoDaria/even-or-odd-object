@@ -1,13 +1,14 @@
 function resetHandler() {
   debugger;
   // reset state
-  incrementor.state.current = 0;
-  incrementor.state.stepSize = 1;
+  stringSorter.setActive("evens");
+  stringSorter.state.evens = ["2", "4"];
+  stringSorter.state.odds = ["1", "3"];
+  stringSorter.state.nany = ["x", "y"];
   // reset DOM
-  document.getElementById("step-size-input").value = incrementor.state.stepSize;
-  const initialItem = incrementor.renderCurrent();
-  document.getElementById("steps-history").innerHTML = "";
-  document.getElementById("steps-history").appendChild(initialItem);
+  document.getElementById("selected").innerHTML = "";
+  const initialItem = stringSorter.renderCurrent();
+  document.getElementById("selected").appendChild(initialItem);
   // log handler
   log.push({ handler: "reset" });
 }
