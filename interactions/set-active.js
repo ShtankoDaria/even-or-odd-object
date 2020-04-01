@@ -10,7 +10,9 @@ document
 
     //create DOM for appropriate elements
     const initialItem = stringSorter.renderCurrent();
-    document.getElementById("active-array-selection").appendChild(initialItem);
+    ///need to clear the innerHTML before resetting it
+    document.getElementById("selected").innerHTML = "";
+    document.getElementById("selected").appendChild(initialItem);
     //this.appendChild(initialItem);
 
     log.push({

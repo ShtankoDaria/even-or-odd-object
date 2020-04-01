@@ -33,6 +33,7 @@ const stringSorter = {
     //create DOM element
     const initialLi = document.createElement("li");
     const currentDisplayed = this.state.active;
+    //added clearing innerHTML before resetting it:
     initialLi.innerHTML = this.state[currentDisplayed];
     return initialLi;
   }
